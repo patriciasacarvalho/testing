@@ -7,8 +7,8 @@ function preload() {
 }
 
 function setup() {
-  let canvasWidth = min(650, windowWidth - 20); // Adjusted canvas width
-  let myCanvas1 = createCanvas(canvasWidth, 500);
+  var width = document.getElementById('column_width').offsetWidth;
+  let myCanvas1 = createCanvas(width, 500);
   myCanvas1.parent('mySketch');
 
   yearSlider = createSlider(2018, 2022, 2000);
