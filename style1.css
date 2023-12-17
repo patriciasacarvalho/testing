@@ -18,6 +18,13 @@ body{
     min-width: 375px;
     padding: 0 25px 0 25px;
  }
+
+ .testcontainer{
+    margin: 100px auto 100px auto;
+    max-width: 680px;
+    min-width: 375px;
+    padding: 0 25px 0 25px;
+ }
  
  #mySketch{
    margin-top: 80px;
