@@ -3,7 +3,7 @@ let points = [];
 let yearSlider;
 
 function preload() {
-  data = loadTable('combined_stations.csv', 'csv', 'header');
+  data = loadTable('assets/combined_stations.csv', 'csv', 'header');
 }
 
 function setup() {
