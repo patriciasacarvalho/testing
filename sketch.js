@@ -65,18 +65,19 @@ function getColor(enterococcusCount) {
 }
 
 function drawAxes() {
-  stroke(0);
-  line(0, height / 2, width, height / 2);
-  line(width / 2, 0, width / 2, height);
+  stroke(180);
+  line(30, 820 / 2, width, 820 / 2);
+  // line(width / 2, 0, width / 2, height);
 
   fill(0);
   textAlign(CENTER);
   textSize(12);
-  text("0.01 - 0.25", width * 0.2, height / 2 + 20);
-  text("0.51 - 0.75", width * 0.4, height / 2 + 20);
-  text("0.76 - 1.0", width * 0.6, height / 2 + 20);
-  text("1.01 - 1.5", width * 0.8, height / 2 + 20);
-  text("1.51 - 3.0", width - 20, height / 2 + 20);
+  let textY = height / 2 + 155;
+  text("0.01 - 0.25", width * 0.2, textY);
+  text("0.51 - 0.75", width * 0.4, textY);
+  text("0.76 - 1.0", width * 0.6, textY);
+  text("1.01 - 1.5", width * 0.8, textY);
+  text("1.51 - 3.0", width - 20, textY);
 
   // X-axis legend
   fill(0);
@@ -98,8 +99,8 @@ function getYearFromDate(dateString) {
 }
 
 function windowResized() {
-  let canvasWidth = min(650, windowWidth - 20);
-  resizeCanvas(canvasWidth, 500);
+  // let canvasWidth = min(650, windowWidth - 20);
+  // resizeCanvas(canvasWidth, 500);
 
   let sliderX = (width - yearSlider.width) / 2;
   let sliderY = height + 40;
@@ -108,7 +109,7 @@ function windowResized() {
 
 class Point {
   constructor(x, y, color, year) {
-    this.x = map(x, -.02, 2, 0, width);
+    this.x = map(x, -.15, 2, 0, width);
     this.y = map(y, 0, 320, height, 0);
     this.color = color;
     this.year = year;
